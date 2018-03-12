@@ -3,12 +3,14 @@ import bodyParser from 'body-parser';
 import {getMenu, saveMenu} from './menu-service';
 import {getContent, saveContent} from './content-service';
 import promiseHandler from './promiseHandler';
+import cors from 'cors';
 
 var app = express();  
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json({ type: 'application/json' }))
 app.use(bodyParser.text({ type: 'text/html' }))
+app.use(cors());
 
 var port = process.env.PORT || 8080;
 

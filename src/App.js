@@ -8,7 +8,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header />
+        <Header menu={this.props.menu}/>
         <Main />
       </div>
     );
